@@ -16,10 +16,13 @@ import (
 // SearchIssues queries the GitHub issue tracker.
 func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	q := url.QueryEscape(strings.Join(terms, " "))
-	resp, err := http.Get(IssuesURL + "?q=" + q)
+theUrl := IssuesURL + "?q=" + q
+fmt.Println("url ", theUrl)
+	resp, err := http.Get(theUrl)
 	if err != nil {
 		return nil, err
 	}
+fmt.Println("resp ", resp)
 	//!-
 	// For long-term stability, instead of http.Get, use the
 	// variant below which adds an HTTP request header indicating

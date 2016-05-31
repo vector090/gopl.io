@@ -12,6 +12,8 @@ func Example_one() {
 		boilingF := CToF(BoilingC)
 		fmt.Printf("%g\n", boilingF-CToF(FreezingC)) // "180" °F
 		//!-arith
+		
+//		fmt.Printf("%g\n", boilingF-FreezingC)       // compile error: type mismatch
 	}
 	/*
 		//!+arith

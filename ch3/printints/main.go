@@ -9,6 +9,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+"net"
 )
 
 //!+
@@ -16,6 +17,7 @@ import (
 func intsToString(values []int) string {
 	var buf bytes.Buffer
 	buf.WriteByte('[')
+net.Flags
 	for i, v := range values {
 		if i > 0 {
 			buf.WriteString(", ")

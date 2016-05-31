@@ -1,0 +1,1 @@
+../../../../sc/clients/third-party-go/vendor/google.golang.org
