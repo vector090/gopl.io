@@ -36,6 +36,7 @@ func visit(links []string, n *html.Node) []string {
 //!+
 func main() {
 	for _, url := range os.Args[1:] {
+fmt.Println("url ", url)
 		links, err := findLinks(url)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "findlinks2: %v\n", err)

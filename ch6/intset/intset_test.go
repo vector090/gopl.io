@@ -1,11 +1,16 @@
 // Copyright (c) 2016 Alan A. A. Donovan & Brian W. Kernighan.
 // License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+//package main
 package intset
 
 import "fmt"
 
+//import "testing"
+
 func Example_one() {
+	//	(*testing.T).Log("hi")
+	println("println")
 	//!+main
 	var x, y IntSet
 	x.Add(1)
@@ -41,6 +46,7 @@ func Example_two() {
 	fmt.Println(&x)         // "{1 9 42 144}"
 	fmt.Println(x.String()) // "{1 9 42 144}"
 	fmt.Println(x)          // "{[4398046511618 0 65536]}"
+	println(x.Str())
 	//!-note
 
 	// Output:

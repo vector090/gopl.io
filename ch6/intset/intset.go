@@ -70,4 +70,15 @@ func (s *IntSet) String() string {
 	return buf.String()
 }
 
+func (s *IntSet) Str() string {
+	var buf bytes.Buffer
+	for _, word := range s.words {
+		//		if word == 0 {
+		//			continue
+		//		}
+		fmt.Fprintf(&buf, "%b ", word)
+	}
+	return buf.String()
+}
+
 //!-string

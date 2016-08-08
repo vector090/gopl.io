@@ -19,7 +19,8 @@ import (
 // It tries for one minute using exponential back-off.
 // It reports an error if all attempts fail.
 func WaitForServer(url string) error {
-	const timeout = 1 * time.Minute
+//	const timeout = 1 * time.Minute
+	const timeout = 1 * time.Second
 	deadline := time.Now().Add(timeout)
 	for tries := 0; time.Now().Before(deadline); tries++ {
 		_, err := http.Head(url)
@@ -46,5 +47,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Site is down: %v\n", err)
 		os.Exit(1)
 	}
+//log.Fatal("try fatal msg") // prints time too, and causing "exit status 1"
+//log.Panic("try panic msg")
 	//!-main
 }
